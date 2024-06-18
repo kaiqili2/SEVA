@@ -30,7 +30,6 @@ To run SEVA, you have to install the following software:
 An easy way to train SEVA, the training dataset can be downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link), and unzip them to /data folder.
 ```
 cd src/
-
 python train_seva.py
 ```
 The results of the first 10 epochs are shown below:
