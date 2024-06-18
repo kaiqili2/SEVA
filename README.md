@@ -1,7 +1,7 @@
 # ARGVF
 SEVA is a novel deep learning-based framework aggregating structural and evolutionary features for virulence factors and antibiotic resistance genes prediction.
 
-![Image text](https://github.com/Cage-1220/ARGVF/blob/main/framework.PNG)
+![Image text](https://github.com/kaiqili2/SEVA/blob/main/framework.PNG)
 
 # System Requirments
 SEVA is developed under Linux environment with:
@@ -27,7 +27,7 @@ To run SEVA, you have to install the following software:
 
 
 # Train SEVA
-An easy way to train SEVA, the training dataset can be downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link), and unzip them in /data folder.
+An easy way to train SEVA, the training dataset can be downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link), and unzip them to /data folder.
 ```
 cd src/
 
@@ -58,7 +58,7 @@ Epoch 9| Loss: 0.0949| Train accuracy: 0.9674| Validation accuracy: 0.9417
 ```
 
 # Test SEVA
-We can also test SEVA with the test dataset downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link) and unzip them in /data folder. The model_checkpoint in [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
+We can also test SEVA with the test dataset downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link) and unzip them to /data folder. The model_checkpoint in [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
 ```
 cd src/
 
