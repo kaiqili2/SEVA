@@ -10,7 +10,6 @@ import logging
 import time
 import tqdm
 
-
 def pdb_process(pdb_feature):
     pdb_mean = np.mean(pdb_feature, axis=0, keepdims=True)
     pdb_feature = np.concatenate((pdb_feature,pdb_mean), axis=0)
