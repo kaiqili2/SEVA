@@ -11,7 +11,6 @@ model, alphabet = esm.pretrained.esm_msa1b_t12_100M_UR50S()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
-
 def get_msa_feature(msa_file, length=32, max_msa=256):
 
     a3m_file = msa_file
