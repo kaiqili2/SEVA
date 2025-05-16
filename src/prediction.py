@@ -10,7 +10,6 @@ from features.pdb_feature import get_pdb_feature
 from features.other_feature import get_other_feature
 
 
-
 def test(msa_file, pdb_file_1, pdb_file_2, pdb_file_3, pdb_file_4, pdb_file_5, pssm_file, model_file, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
     with open(msa_file, 'r') as f:
         a3m_str = f.read()
