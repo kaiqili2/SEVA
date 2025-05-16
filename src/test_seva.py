@@ -48,7 +48,6 @@ def test(loader, model_name, device=torch.device('cuda' if torch.cuda.is_availab
     return accuracy, confusion_matrix
 
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--fasta_file", type=str, default="../data/Uniprot_test.fasta", help="fasta file with all test data")
