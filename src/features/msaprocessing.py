@@ -15,7 +15,6 @@ FeatureDict = MutableMapping[str, np.ndarray]
 class Identifiers:
   species_id: str = ''
 
-
 @dataclasses.dataclass(frozen=True)
 class Msa:
   """Class representing a parsed MSA file."""
