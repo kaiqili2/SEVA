@@ -326,3 +326,5 @@ if __name__ == '__main__':
     y, attn = model(x,dist_map,mask,other_feature)
     print(model)
     print(y)
+
+
