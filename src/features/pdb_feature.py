@@ -61,3 +61,4 @@ if __name__ == '__main__':
                               "../examples/UNIPROT_E3XRD1_4.pdb",
                               "../examples/UNIPROT_E3XRD1_5.pdb")
     print(feature)
+    
