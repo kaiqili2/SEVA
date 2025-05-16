@@ -163,4 +163,3 @@ if __name__ == '__main__':
           model_name=args.model_name,
           device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
           )
-
