@@ -190,11 +190,11 @@ class TransformerEncoderBlock(nn.Module):
     def __init__(self,
                  in_channels: int = 768,
                  emb_size: int = 768,
-                 num_heads: int = 8,
+                 num_heads: int = 6,
                  attention_dropout: float = 0.0,
-                 drop_res: float = 0.1,
+                 drop_res: float = 0.2,
                  forward_expansion: int = 4,
-                 forward_drop_p: float = 0.1,
+                 forward_drop_p: float = 0.2,
                  **kwargs):
         super().__init__()
 
@@ -277,10 +277,10 @@ class SEVA(nn.Module):
     def __init__(self,
                  in_channels: int = 768,
                  emb_size: int = 768,
-                 depth: int = 6,
+                 depth: int = 2,
                  num_heads: int = 6,
                  dropout: float = 0.2,
-                 attention_dropout: float = 0.1,
+                 attention_dropout: float = 0.2,
                  ffn_expansion: int = 4,
                  n_classes: int = 3,
                  other_feature_dim: int = 0,
@@ -326,5 +326,6 @@ if __name__ == '__main__':
     y, attn = model(x,dist_map,mask,other_feature)
     print(model)
     print(y)
+
 
 
