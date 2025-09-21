@@ -22,7 +22,7 @@ class ProteinDataset(Dataset):
     def __init__(self,
                  fasta_file=None,
                  label_file=None,
-                 batch_size=20,
+                 batch_size=32,
                  seq_len_batch=1000,
                  max_seq_len=1000,
                  pad_index=0,
@@ -110,4 +110,5 @@ if __name__ == '__main__':
     for seq, name, msa_feature, pdb_feature, pad_mask, other_feature, label in dataloader:
         print(pdb_feature)
         print(pdb_feature.sum(-2))
+
 
