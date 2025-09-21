@@ -49,12 +49,6 @@ def test(msa_file, pdb_file_1, pdb_file_2, pdb_file_3, pdb_file_4, pdb_file_5, p
         pred = pred.argmax(dim=1)
 
         pred = pred.cpu().numpy().flatten()
-        if pred == 0:
-            print("This sequence is predicted to be an ARG")
-        elif pred == 1:
-            print("This sequence is predicted to be a VF")
-        elif pred == 3:
-            print("This sequence is predicted to be neither an ARG nor a VF")
 
 
 if __name__ == '__main__':
@@ -89,3 +83,4 @@ if __name__ == '__main__':
     #      )
 
     # python prediction.py --msa_file ../examples/UNIPROT_E3XRD1.a3m --pdb_file_1 ../examples/UNIPROT_E3XRD1_1.pdb --pdb_file_2 ../examples/UNIPROT_E3XRD1_2.pdb --pdb_file_3 ../examples/UNIPROT_E3XRD1_3.pdb --pdb_file_4 ../examples/UNIPROT_E3XRD1_4.pdb --pdb_file_5 ../examples/UNIPROT_E3XRD1_5.pdb --pssm_file ../examples/UNIPROT_E3XRD1.pssm --model_file SEVA.pt
+
