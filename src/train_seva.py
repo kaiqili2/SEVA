@@ -34,8 +34,8 @@ def train(fasta_file="../data/Uniprot_train.fasta",
           pdb_path="../data/pdb_feature/",
           feature_path="../data/other_feature/",
           learning_rate=5e-5,
-          batch_size=20,
-          epoch_n=100,
+          batch_size=32,
+          epoch_n=50,
           random_seed=2023,
           val_split=0.1,
           model_name="SEVA.pt",
@@ -57,10 +57,10 @@ def train(fasta_file="../data/Uniprot_train.fasta",
     # build model
     model = SEVA(in_channels=768,
                  emb_size=768,
-                 depth=6,
+                 depth=2,
                  num_heads=6,
                  dropout=0.2,
-                 attention_dropout=0.1,
+                 attention_dropout=0.2,
                  ffn_expansion=4,
                  n_classes=3,
                  other_feature_dim=2154
@@ -144,8 +144,8 @@ if __name__ == '__main__':
     parser.add_argument("--pdb_path", type=str, default="../data/pdb_feature/", help="path of pdb feature")
     parser.add_argument("--other_feature_path", type=str, default="../data/other_feature/", help="path of other feature path")
     parser.add_argument("--learning_rate", type=float, default=5e-5, help="learning rate for model training")
-    parser.add_argument("--batch_size", type=int, default=20, help="batch size for model training")
-    parser.add_argument("--number_epoch", type=int, default=100, help="epochs of model training")
+    parser.add_argument("--batch_size", type=int, default=32, help="batch size for model training")
+    parser.add_argument("--number_epoch", type=int, default=50, help="epochs of model training")
     parser.add_argument("--random_seed", type=int, default=2023, help="random seed for model training")
     parser.add_argument("--model_name", type=str, default="SEVA.pt", help="model name")
     args = parser.parse_args()
@@ -163,3 +163,4 @@ if __name__ == '__main__':
           model_name=args.model_name,
           device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
           )
+
