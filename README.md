@@ -1,9 +1,8 @@
 # SEVA 
-SEVA is a novel deep learning-based framework aggregating structural and evolutionary features for virulence factors and antibiotic resistance genes prediction.
-
+SEVA is a novel deep learning-based framework aggregating structural and evolutionary features for virulence factors and antibiotic resistance genes prediction. The latest version will be updated as soon as possible.
 ![Image text](https://github.com/kaiqili2/SEVA/blob/main/model.png)
 
-# System Requirments
+# System Requirements
 SEVA is developed under Linux environment with:
 
 python 3.8.18
