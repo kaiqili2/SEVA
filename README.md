@@ -40,11 +40,20 @@ We provide two prediction modes to balance speed and accuracy:
 # Quick Start
 
 # Run SEVA-Fast for rapid screening
-python seva_fast_predict.py --input your_sequences.fasta
+The model checkpoint can be downloaded from [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
+```
+cd src/
+python seva_fast_predict.py --input your_sequences.fasta --model_file SEVA_fast.pt
+```
 
 # Run complete SEVA for detailed analysis
-python seva_predict.py  --input your_sequences.fasta
+To run SEVA for VF and ARG prediction, it requires MSA file, PDB file, and PSSM file. These features files should pre-generated. All these files can be generated from the previously mentioned software. The model checkpoint can be downloaded from [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
 
+We provide an example to run SEVA_full prediction.
+```
+cd src/
+python prediction.py --msa_file ../examples/UNIPROT_E3XRD1.a3m --pdb_file_1 ../examples/UNIPROT_E3XRD1_1.pdb --pdb_file_2 ../examples/UNIPROT_E3XRD1_2.pdb --pdb_file_3 ../examples/UNIPROT_E3XRD1_3.pdb --pdb_file_4 ../examples/UNIPROT_E3XRD1_4.pdb --pdb_file_5 ../examples/UNIPROT_E3XRD1_5.pdb --pssm_file ../examples/UNIPROT_E3XRD1.pssm --model_file SEVA.pt
+```
 
 # Train SEVA
 An easy way to train SEVA, the training dataset can be downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link), and unzip them to /data folder.
@@ -53,14 +62,6 @@ cd src/
 python train_seva.py
 ```
 
-# Run SEVA for VF and ARG prediction with your own data.
-To run SEVA for VF and ARG prediction, it requires MSA file, PDB file, and PSSM file. All these files can be generated from the previously mentioned software. The model checkpoint can be downloaded from [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
-
-We provide an example to run SEVA prediction.
-```
-cd src/
-python prediction.py --msa_file ../examples/UNIPROT_E3XRD1.a3m --pdb_file_1 ../examples/UNIPROT_E3XRD1_1.pdb --pdb_file_2 ../examples/UNIPROT_E3XRD1_2.pdb --pdb_file_3 ../examples/UNIPROT_E3XRD1_3.pdb --pdb_file_4 ../examples/UNIPROT_E3XRD1_4.pdb --pdb_file_5 ../examples/UNIPROT_E3XRD1_5.pdb --pssm_file ../examples/UNIPROT_E3XRD1.pssm --model_file SEVA.pt
-```
 # License
 This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
 
