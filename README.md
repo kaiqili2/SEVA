@@ -29,11 +29,13 @@ To run SEVA, you have to install the following software:
 
 # Model Variants: Choose What Fits Your Project
 We provide two prediction modes to balance speed and accuracy:
-model	| SEVA (Full Model)	| SEVA-Fast (Fast Mode)
-Features |	Includes statistical features, PSSM, MSA search, and structural prediction.	| Omits intensive MSA/structural steps; uses statistical features only.
-Best For	| Maximum accuracy on challenging, low-identity sequences.	| Rapid screening of large datasets in time-sensitive contexts.
-Speed	| ~1000 seconds per sequence. |	~0.36 seconds per sequence.
-Accuracy |	97.13% on the test dataset |91.23% on the test dataset.
+| model	| SEVA (Full Model)	| SEVA-Fast (Fast Mode) |
+| ------ | ------ | ------ |
+| Features |	Includes statistical features, PSSM, MSA search, and structural prediction.	| Omits intensive MSA/structural steps; uses statistical features only. |
+| Best For	| Maximum accuracy on challenging, low-identity sequences.	| Rapid screening of large datasets in time-sensitive contexts. |
+| Speed	| ~1000 seconds per sequence. |	~0.36 seconds per sequence. |
+| Accuracy |	97.13% on the test dataset |91.23% on the test dataset. |
+
 
 # Quick Start
 
