@@ -55,12 +55,6 @@ cd src/
 python prediction.py --msa_file ../examples/UNIPROT_E3XRD1.a3m --pdb_file_1 ../examples/UNIPROT_E3XRD1_1.pdb --pdb_file_2 ../examples/UNIPROT_E3XRD1_2.pdb --pdb_file_3 ../examples/UNIPROT_E3XRD1_3.pdb --pdb_file_4 ../examples/UNIPROT_E3XRD1_4.pdb --pdb_file_5 ../examples/UNIPROT_E3XRD1_5.pdb --pssm_file ../examples/UNIPROT_E3XRD1.pssm --model_file SEVA.pt
 ```
 
-# Train SEVA
-An easy way to train SEVA, the training dataset can be downloaded from [Google Drive](https://drive.google.com/file/d/1-hEIfi09xz-pLhVwCXhfmQNoBZUv8KFv/view?usp=drive_link), and unzip them to /data folder.
-```
-cd src/
-python train_seva.py
-```
 
 # License
 This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
