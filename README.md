@@ -3,7 +3,7 @@ SEVA is a novel deep learning-based framework aggregating structural and evoluti
 
 The latest version will be updated as soon as possible.
 
-![Image text](https://github.com/kaiqili2/SEVA/blob/main/model.png)
+![Image text](https://github.com/kaiqili2/SEVA/blob/main/overview.png)
 
 # System Requirements
 SEVA is developed under Linux environment with:
