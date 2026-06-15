@@ -40,14 +40,15 @@ We provide two prediction modes to balance speed and accuracy:
 # Quick Start
 
 # Run SEVA-Fast for rapid screening
-The model checkpoint can be downloaded from [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
+From the src directory: 
 ```
 cd src/
 python seva_fast_predict.py --input your_sequences.fasta --model_file SEVA_fast.pt
 ```
+SEVA-Fast predicts whether each query protein is most consistent with an ARG, VF, or NS class using statistical sequence features.
 
 # Run complete SEVA for detailed analysis
-To run SEVA for VF and ARG prediction, it requires MSA file, PDB file, and PSSM file. These features files should pre-generated. All these files can be generated from the previously mentioned software. The model checkpoint can be downloaded from [here](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link), and put them in /src folder.
+Full SEVA integrates statistical sequence features, PSSM features, MSA embeddings, and structure-derived distance maps.
 
 We provide an example to run SEVA_full prediction.
 ```
