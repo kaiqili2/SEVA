@@ -1,7 +1,7 @@
 # SEVA 
-SEVA is a novel deep learning-based framework aggregating structural and evolutionary features for virulence factors and antibiotic resistance genes prediction. 
+SEVA is a deep learning framework for predicting virulence factors (VFs), antibiotic resistance genes (ARGs), and negative samples (NSs) from protein sequences.
 
-The latest version will be updated as soon as possible.
+The full SEVA model integrates complementary sequence, evolutionary, and structure-aware features, including statistical sequence descriptors, position-specific scoring matrices (PSSMs), multiple sequence alignment (MSA) embeddings, and protein structure-derived distance maps. SEVA-Fast is a lightweight version that uses statistical sequence features only for rapid preliminary screening.
 
 ![Image text](https://github.com/kaiqili2/SEVA/blob/main/overview.png)
 
@@ -32,8 +32,8 @@ We provide two prediction modes to balance speed and accuracy:
 | model	| SEVA (Full Model)	| SEVA-Fast (Fast Mode) |
 | ------ | ------ | ------ |
 | Features |	Includes statistical features, PSSM, MSA search, and structural prediction.	| Omits intensive MSA/structural steps; uses statistical features only. |
-| Best For	| Maximum accuracy on challenging, low-identity sequences.	| Rapid screening of large datasets in time-sensitive contexts. |
-| Speed	| ~1000 seconds per sequence. |	~0.36 seconds per sequence. |
+| Best For	| Maximum accuracy.	| Rapid screening of large datasets. |
+| Speed	| ~1070 seconds per sequence. |	~0.36 seconds per sequence. |
 | Accuracy |	97.13% on the test dataset |91.23% on the test dataset. |
 
 
