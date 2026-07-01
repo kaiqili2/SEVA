@@ -3,7 +3,7 @@ SEVA is a deep learning framework for predicting virulence factors (VFs), antibi
 
 The full SEVA model integrates complementary sequence, evolutionary, and structure-aware features, including statistical sequence descriptors, position-specific scoring matrices (PSSMs), multiple sequence alignment (MSA) embeddings, and protein structure-derived distance maps. SEVA-Fast is a lightweight version that uses statistical sequence features only for rapid preliminary screening.
 
-![Image text](https://github.com/kaiqili2/SEVA/blob/main/overview.png)
+![Image text](https://github.com/kaiqili2/SEVA/blob/main/Overview.png)
 
 # System Requirements
 SEVA is developed under Linux environment with:
