@@ -74,23 +74,23 @@ if __name__ == '__main__':
     parser.add_argument("--model_file", type=str, help="model file")
     args = parser.parse_args()
 
-    # test(msa_file=args.msa_file,
-    #      pdb_file_1=args.pdb_file_1,
-    #      pdb_file_2=args.pdb_file_2,
-    #      pdb_file_3=args.pdb_file_3,
-    #      pdb_file_4=args.pdb_file_4,
-    #      pdb_file_5=args.pdb_file_5,
-    #      pssm_file=args.pssm_file,
-    #      model_file=args.model_file,)
+    test(msa_file=args.msa_file,
+         pdb_file_1=args.pdb_file_1,
+         pdb_file_2=args.pdb_file_2,
+         pdb_file_3=args.pdb_file_3,
+         pdb_file_4=args.pdb_file_4,
+         pdb_file_5=args.pdb_file_5,
+         pssm_file=args.pssm_file,
+         model_file=args.model_file,)
 
-    test('../examples/UNIPROT_E3XRD1.a3m',
-         "../examples/UNIPROT_E3XRD1_1.pdb",
-         "../examples/UNIPROT_E3XRD1_2.pdb",
-         "../examples/UNIPROT_E3XRD1_3.pdb",
-         "../examples/UNIPROT_E3XRD1_4.pdb",
-         "../examples/UNIPROT_E3XRD1_5.pdb",
-         "../examples/UNIPROT_E3XRD1.pssm",
-         "SEVA.pt"
-         )
+    # test('../examples/UNIPROT_E3XRD1.a3m',
+    #      "../examples/UNIPROT_E3XRD1_1.pdb",
+    #      "../examples/UNIPROT_E3XRD1_2.pdb",
+    #      "../examples/UNIPROT_E3XRD1_3.pdb",
+    #      "../examples/UNIPROT_E3XRD1_4.pdb",
+    #      "../examples/UNIPROT_E3XRD1_5.pdb",
+    #      "../examples/UNIPROT_E3XRD1.pssm",
+    #      "SEVA.pt"
+    #      )
 
     # python seva_predict.py --msa_file ../examples/UNIPROT_E3XRD1.a3m --pdb_file_1 ../examples/UNIPROT_E3XRD1_1.pdb --pdb_file_2 ../examples/UNIPROT_E3XRD1_2.pdb --pdb_file_3 ../examples/UNIPROT_E3XRD1_3.pdb --pdb_file_4 ../examples/UNIPROT_E3XRD1_4.pdb --pdb_file_5 ../examples/UNIPROT_E3XRD1_5.pdb --pssm_file ./examples/UNIPROT_E3XRD1.pssm --model_file SEVA_1.pt
