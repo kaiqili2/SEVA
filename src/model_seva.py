@@ -287,14 +287,3 @@ class SEVA(nn.Module):
         return x, attn
 
 
-if __name__ == '__main__':
-    x = torch.randn((1,1000,768))
-    dist_map = torch.randn((1,6,1000,1000))
-    mask = torch.randint(0,2,[1,1000])
-    mask = None
-    other_feature = torch.randn((1,1000))
-
-    model = SEVA(other_feature_dim=1000)
-    y, attn = model(x,dist_map,mask,other_feature)
-    print(model)
-    print(y)
