@@ -14,22 +14,6 @@ We provide two prediction modes to balance speed and accuracy:
 | Speed	| ~1070 seconds per sequence. |	~0.36 seconds per sequence. |
 | Accuracy |	97.13% on the test dataset |91.23% on the test dataset. |
 
-## Repository layout
-
-```text
-SEVA_3/
-|-- data/                       # Training/test data 
-|-- examples/                   # Example A3M, PDB, and PSSM files
-|-- src/
-|   |-- SEVA.pt                 # Full-model checkpoint
-|   |-- SEVA_fast.pt            # SEVA-Fast checkpoint
-|   |-- seva_predict.py         # Full-model single-protein prediction
-|   |-- seva_fast_predict.py    # SEVA-Fast single-protein prediction
-|   |-- train_seva.py           # Full-model training
-|   |-- test_seva.py            # Full-model evaluation
-|   `-- features/               # Feature-extraction modules
-`-- README.md
-```
 
 ## Requirements
 
