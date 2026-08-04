@@ -108,16 +108,5 @@ class ProteinDataset(Dataset):
         return seq, name, msa_feature, pdb_feature, pad_mask, other_feature, label
 
 
-if __name__ == '__main__':
-    data = ProteinDataset(fasta_file="../data/Uniprot_train.fasta",
-                          label_file="../data/label_train.txt",
-                          msa_path="../data/msa_feature/",
-                          pdb_path="../data/pdb/",
-                          feature_path="../data/other_feature/")
-    dataloader = DataLoader(data, batch_size=2, shuffle=True, drop_last=True, num_workers=1)
-    for seq, name, msa_feature, pdb_feature, pad_mask, other_feature, label in dataloader:
-        print(pdb_feature)
-        print(pdb_feature.sum(-2))
-
 
 
