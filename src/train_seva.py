@@ -33,9 +33,9 @@ def train(fasta_file="../data/Uniprot_train.fasta",
           msa_path="../data/msa_feature256/",
           pdb_path="../data/pdb/",
           feature_path="../data/other_feature/",
-          learning_rate=5e-5,
-          batch_size=20,
-          epoch_n=100,
+          learning_rate=1e-4,
+          batch_size=32,
+          epoch_n=50,
           random_seed=2023,
           val_split=0.1,
           model_name="SEVA.pt",
@@ -62,16 +62,16 @@ def train(fasta_file="../data/Uniprot_train.fasta",
     # build model
     model = SEVA(in_channels=768,
                  emb_size=768,
-                 depth=6,
+                 depth=2,
                  num_heads=6,
                  dropout=0.2,
-                 attention_dropout=0.1,
+                 attention_dropout=0.2,
                  ffn_expansion=4,
                  n_classes=3,
                  other_feature_dim=2154
               ).to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=0.0001)
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=0.00001)
 
     # train
     old_val_acc = 0
