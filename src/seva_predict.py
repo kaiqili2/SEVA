@@ -45,15 +45,15 @@ def test(msa_file, pdb_file_1, pdb_file_2, pdb_file_3, pdb_file_4, pdb_file_5, p
     model.eval()
     with torch.no_grad():
         msa_feature = msa_feature.to(device).unsqueeze(0)
-        pbd_feature = pdb_feature.to(device).unsqueeze(0)
+        pdb_feature = pdb_feature.to(device).unsqueeze(0)
         pad_mask = pad_mask.to(device).unsqueeze(0)
         other_feature = other_feature.to(device).unsqueeze(0)
 
 
-        pred, attn = model(msa_feature, pbd_feature, pad_mask, other_feature)
+        pred, attn = model(msa_feature, pdb_feature, pad_mask, other_feature)
         pred = pred.argmax(dim=1)
 
-        pred = pred.cpu().numpy().flatten()
+        prediction = int(pred.argmax(dim=1).item())
         if pred == 0:
             print("This sequence is predicted to be an ARG")
         elif pred == 1:
