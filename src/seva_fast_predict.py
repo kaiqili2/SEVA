@@ -11,6 +11,14 @@ import matplotlib.pyplot as plt
 
 
 def test(sequence, model_file):
+    sequence = ''.join(sequence.split()).upper()
+    valid_amino_acids = set('ACDEFGHIKLMNPQRSTVWY')
+    invalid_amino_acids = set(sequence) - valid_amino_acids
+
+    if len(sequence) <= 30:
+        raise ValueError('SEVA-Fast requires a sequence longer than 30 residues.')
+    if invalid_amino_acids:
+        raise ValueError(f'Unsupported amino-acid symbols: {sorted(invalid_amino_acids)}')
 
 
     other_feature = get_statistical_feature(sequence)
