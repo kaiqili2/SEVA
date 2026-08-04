@@ -57,6 +57,17 @@ For the full model, the first sequence in the A3M file is the query sequence. It
 
 # Quick Start
 
+## Pretrained checkpoints
+
+Download the pretrained checkpoint that matches the prediction mode you plan to use:
+
+| Checkpoint | Prediction mode | Download |
+| --- | --- | --- |
+| `SEVA.pt` | Full SEVA | [Google Drive](https://drive.google.com/file/d/1-hXc_dObTe8b8IfKeP3vyiAt5QGwwl58/view?usp=drive_link) |
+| `SEVA_fast.pt` | SEVA-Fast | [Google Drive](https://drive.google.com/file/d/1yigoj71jIPNtv-S_o55ycEUuDwartcfA/view?usp=drive_link) |
+
+Place the downloaded checkpoint files in the `src/` directory, or provide their paths through `--model_file` when running a prediction command.
+
 # Run SEVA-Fast for rapid screening
 SEVA-Fast only needs the amino-acid sequence and the included `SEVA_fast.pt` checkpoint. Run it from `src/`:
 
