@@ -18,7 +18,7 @@ We provide two prediction modes to balance speed and accuracy:
 
 ```text
 SEVA_3/
-|-- data/                       # Training/test data and precomputed features
+|-- data/                       # Training/test data 
 |-- examples/                   # Example A3M, PDB, and PSSM files
 |-- src/
 |   |-- SEVA.pt                 # Full-model checkpoint
@@ -95,6 +95,14 @@ cd src/
 python seva_predict.py --msa_file ../examples/UNIPROT_E3XRD1.a3m --pdb_file_1 ../examples/UNIPROT_E3XRD1_1.pdb --pdb_file_2 ../examples/UNIPROT_E3XRD1_2.pdb --pdb_file_3 ../examples/UNIPROT_E3XRD1_3.pdb --pdb_file_4 ../examples/UNIPROT_E3XRD1_4.pdb --pdb_file_5 ../examples/UNIPROT_E3XRD1_5.pdb --pssm_file ../examples/UNIPROT_E3XRD1.pssm --model_file SEVA.pt
 ```
 
+### Full-model parameters
+
+| Parameter | Description |
+| --- | --- |
+| `--msa_file` | A3M multiple-sequence alignment; the first sequence is treated as the query. |
+| `--pdb_file_1` ... `--pdb_file_5` | Five PDB structure predictions for the query protein. |
+| `--pssm_file` | PSSM generated for the same query protein. |
+| `--model_file` | Full-model checkpoint, normally `SEVA.pt`. |
 
 # License
 This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
