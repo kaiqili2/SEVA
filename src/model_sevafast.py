@@ -66,11 +66,3 @@ class SEVA(nn.Module):
         return x
 
 
-if __name__ == '__main__':
-    x = torch.randn((1,934))
-
-
-    model = SEVA()
-    y = model(x)
-    print(model)
-    print(y)
