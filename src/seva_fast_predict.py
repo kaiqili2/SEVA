@@ -34,7 +34,7 @@ def test(sequence, model_file):
         pred = model(other_feature)
         pred = pred.argmax(dim=1)
 
-        pred = pred.cpu().numpy().flatten()
+        pred = int(pred.argmax(dim=1).item())
 
         if pred == 0:
             print("This sequence is predicted to be an ARG")
