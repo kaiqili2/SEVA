@@ -56,7 +56,7 @@ if __name__ == '__main__':
     parser.add_argument("--msa_path", type=str, default="../data/msa_feature256/", help="path of msa feature")
     parser.add_argument("--pdb_path", type=str, default="../data/pdb/", help="path of pdb feature")
     parser.add_argument("--other_feature_path", type=str, default="../data/other_feature/", help="path of other feature path")
-    parser.add_argument("--model_file", type=str, default="SEVA_1.pt", help="model file")
+    parser.add_argument("--model_file", type=str, default="SEVA.pt", help="model file")
     args = parser.parse_args()
 
     test_data = ProteinDataset(fasta_file=args.fasta_file, label_file=args.label_file,
